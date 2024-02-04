@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Effect</title>
+    <style>
+        body{
+            background: radial-gradient(#faebd7 ,#091813);
+        }
+        .wrapper{
+            display: flex;
+            align-items: center ;
+            justify-content: center;
+            height: 100vh;            
+        }
+        .box{
+            background: url(IMG10.jpg);
+            -webkit-background-size:cover; 
+            background-size: cover;
+            background-position: center center;
+            height: 550px;
+            width: 550px;
+            box-shadow: 0 20px 5px 5px rgba(0, 0 , 0 , 0.2) ;
+            animation: animate  5s ease-in-out infinite;
+            transition: all 5s ease-in-out;
+
+
+        }
+        @keyframes animate {
+            0%{
+                border-radius: 60% 40% 30% 70% / 60% 30% 70% 40% ;
+            }
+           50%{
+                border-radius: 30% 60% 70% 40% / 50% 60% 30% 60% ;
+            }
+            100%{
+                border-radius: 60% 40% 30% 70% / 60% 30% 40% 70% ;
+            }
+            
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box"></div>
+    </div>
+    
+</body>
+</html>
